@@ -1,7 +1,7 @@
 == README
 
-Coder Manual Project Application
-Subscription-based web application
+First Ruby on Rails project
+Subscription-based web application, just for testing
 
 Things you may want to cover:
 
