@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
   <body>
-    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav-collapse">
@@ -27,8 +27,10 @@
       </div> <!-- End of Navbar-collapse -->
       </div>
     </div>
-
+    
+<div class="container">
   <%= yield %>
-
+</div>
+    
   </body>
 </html>
