@@ -27,6 +27,9 @@ gem 'coffee-rails', '4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
+# Turbo links working with jquery
+gem 'jquery-turbolinks'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 # gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -42,6 +45,7 @@ gem 'devise', '3.4.1'
 
 # Use stripe for handeling payments
 gem 'stripe', '1.16.1'
+
 
 # Use figaro to hide secret keys
 gem 'figaro', '1.0.0'

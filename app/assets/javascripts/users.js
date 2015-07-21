@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  Stripe.setPublisable($('meta[name="stripe-key"]').attr('content'));
+  Stripe.setPublishableKey($('meta[name="stripe-key"]').attr('content'));
   // Watch for a form submission:
   $("#form-submit-btn").click(function(event) {
     event.preventDefault();
@@ -12,12 +12,12 @@ $(document).ready(function() {
     
     if (!error) {
       // Get the Stripe token:
-      Stripe.CreateToken({
+      Stripe.createToken({
         number: ccNum,
         cvc: cvcNum,
         exp_month: expMonth,
         exp_year: expYear
-      }, strikeResponseHandler);
+      }, stripeResponseHandler);
     }
     return false;
   }); // form submission
@@ -30,10 +30,9 @@ $(document).ready(function() {
     var token = response.id;
     
     // Add the token to the form
-    f.append('<input type="hidden" name="user[stripe_card_token]" value="' + token '" />');
+    f.append('<input type="hidden" name="user[stripe_card_token]" value="' + token + '" />');
     
     // Submit the form
     f.get(0).submit();
   }
-  
 });
